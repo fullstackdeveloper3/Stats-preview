@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(233, 47%, 7%);
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+}
+.component {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+@media (min-width: 992px) {
+    .component {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (min-width: 992px) {
+    .component {
+        width: 70%;
+    }
+} 
+.component .container {
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 992px) {
+    .component .container {
+        flex-direction: row;
+        width: 75%;
+    }
+}
+.component .container .photo img {
+    width: 100%;
+    height: 100%;
+}
+.component .container .photo{
+    position: relative;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
+}
+@media (min-width: 992px) {
+    .component .container .photo {
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 15px;
+        width: 100%;   
+    }
+}
+.component .container .photo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 99%;
+    background-color: hsl(277deg 53% 35% / 70%);
+}
+@media (min-width: 992px){
+    .component .container .photo::before {
+        height: 100%;
+    } 
+}
+.component .container .background {
+    background-color: hsl(244, 38%, 16%);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-top: -2px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+@media (min-width: 992px) {
+    .component .container .background{
+        text-align: left;
+    }
+}
+@media (min-width: 992px) {
+    .component .container .background{
+        order: -2;
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 0;
+        padding: 30px 50px;
+    }
+}
+.component .container .background .text h3 {
+    font-size: 26px;
+    font-weight: 700;
+}
+@media (min-width: 992px) {
+    .component .container .background .text h3 {
+        font-size: 34px;
+    }
+}
+.component .container .background .text h3 span { 
+    color: hsl(277, 64%, 61%);
+}
+.component .container .background .text p {
+    line-height: 1.8;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 14px;
+}
+@media (min-width: 992px) {
+    .component .container .background .text p {
+        padding: 0 70px 0 0px;
+    }
+}
+@media (min-width: 992px) {
+    .component .container .background .numbers {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+    }
+}
+.component .container .background .numbers span {
+    margin: 40px 0;
+}
+.component .container .background .numbers span {
+    font-weight: 700;
+    font-size: 20px;
+    display: block;
+    position: relative;
+}
+@media (min-width: 992px) {
+    .component .container .background .numbers span{
+        display: inline;
+        margin-right: 64px;
+    }
+}
+.component .container .background .numbers span:first-of-type::before {
+    content: "companies";
+    text-transform: uppercase;
+    position: absolute;
+}
+.component .container .background .numbers span:nth-of-type(2)::before{
+    content: "templates";
+    text-transform: uppercase;
+    position: absolute;
+}
+.component .container .background .numbers span:last-of-type::before {
+    content: "queries";
+    text-transform: uppercase;
+    position: absolute;
+}
+.component .container .background .numbers span::before {
+    bottom: -18px;
+    left: 50%;
+    transform: translatex(-50%);
+    font-size: 10px;
+    color: hsla(0, 0%, 100%, 0.6);
+}
