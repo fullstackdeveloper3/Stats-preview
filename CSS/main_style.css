@@ -7,8 +7,8 @@ body {
     height: 100vh;
 }
 .component {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    width: 100%;
 }
 @media (min-width: 992px) {
     .component {
@@ -24,34 +24,42 @@ body {
     }
 } 
 .component .container {
-    width: 86%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding: 0 15px;
     display: flex;
     flex-direction: column;
 }
-@media (min-width: 992px) {
+ @media (min-width: 992px) {
     .component .container {
         flex-direction: row;
-        width: 75%;
+        width: 80%;
     }
 }
+/*
 .component .container .photo img {
     width: 100%;
     height: 100%;
-}
+} */
 .component .container .photo{
     position: relative;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     overflow: hidden;
-}
+    background-image: url("../images/image-header-mobile.jpg");
+    width: 100%;
+    background-size: cover;
+    height: 210px;
+} 
 @media (min-width: 992px) {
     .component .container .photo {
         border-top-left-radius: 0;
+        flex-basis: 100%;
         border-bottom-right-radius: 15px;
-        width: 100%;   
+        background-image: url("../images/image-header-desktop.jpg");
+        background-size: cover;
+        height: auto;   
     }
 }
 .component .container .photo::before {
@@ -60,7 +68,7 @@ body {
     left: 0;
     top: 0;
     width: 100%;
-    height: 99%;
+    height: 100%;
     background-color: hsl(277deg 53% 35% / 70%);
 }
 @media (min-width: 992px){
@@ -96,7 +104,8 @@ body {
 }
 @media (min-width: 992px) {
     .component .container .background .text h3 {
-        font-size: 34px;
+        font-size: 35px;
+        padding-right: 25px;
     }
 }
 .component .container .background .text h3 span { 
@@ -105,11 +114,11 @@ body {
 .component .container .background .text p {
     line-height: 1.8;
     color: hsla(0, 0%, 100%, 0.6);
-    font-size: 14px;
+    font-size: 15px;
 }
 @media (min-width: 992px) {
     .component .container .background .text p {
-        padding: 0 70px 0 0px;
+        padding: 0 90px 0 0px;
     }
 }
 @media (min-width: 992px) {
